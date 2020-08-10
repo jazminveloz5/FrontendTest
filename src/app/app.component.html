@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<HTML lang="en">
+
+
+  <script src="https://kit.fontawesome.com/5d7ad459bf.js"></script>
+<div align="center"><img src="./assets/icologo.png" alt="Ironbit" width="50" height="50" > </div>
+<h1 align="center"> <strong>Frontend Test</strong> </h1>
+<br/>
+<br/>
+<br/>
+
+<body>
+<div style="border: inset 0pt"> 
+  <form (submit)="addNewTodo()">
+    <div class="form-group">
+       <div align="center" >
+         <input [(ngModel)]="description" type="text" name="description" class="todo-input" placeholder="Agregar una nueva tarea"style="background-color:Transparent;
+         color:white;
+         width:60%;
+         padding: 3px;
+         border-top: 0px;
+         border-right: 0px;
+         border-bottom: 1px solid white;
+         border-left: 0px">
+         
+        <div align="center"><input class="btn btn-primary" type ="submit"value="Agregar" style="display:inline"> </div>
+        </div>
+    </div>
+    <table style="margin: 0 auto;">
+      <tr>
+        <th width="800" height="50">ToDo List by Ironbit</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr *ngFor="let todo of todos">
+        <td>{{todo.description}}<p align="rigth"></p></td>
+        <td><button (click)="deleteTodo(todo)"><i class="fas fa-cat">Eliminar</i></button></td>
+        </tr>
+        <div *ngIf="todos.length<1" style="background-color:white; width:400; text-align:center">No hay ToDo's, ¡Tòmate un cafè!</div>
+    </table>
+  </form>
+    <div class="list-group">
+    <div class="list-group-item" style="background-color:Transparent" color:#CC0000 *ngFor="let todo of todos" (click)="todo.isDone = !todo.isDone">
+    </div>
+</div>
+</div>
+
+
+
+
+</body>

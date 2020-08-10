@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+body {
+    background-color:rgb(118, 165, 103); /* For browsers that do not support gradients */
+    background-image: linear-gradient(-100deg, rgb(0, 255, 221), rgba(123, 255, 0, 0.938));
+  }
+
+th {
+  background: rgb(146, 255, 4);
+  border-radius: 15px;
+ 
+}
+h1 { color: #fdfdfd; }
+
+button {
+  width: 70px;
+  height: 30px;
+  background: red;
+  border-radius: 1px;
+  border: none;
+  cursor: pointer;
+  float: left;
+  color:white
+}
+div {
+  border: medium transparent
+}
+tr{
+  background:white ;
+}
